@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="HungryPanda Box Hill 线下活动：复制推荐文案，配上现场照片，根据真实体验分享小红书，向工作人员展示帖子领取随机活动礼物。">
+  <title>🐼 Box Hill 小红书活动</title>
+  <style>
+    :root { color-scheme: light; --ink: #222220; --muted: #686861; --red: #df2940; --line: #eae9e3; }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; background: #fff; }
+    body { margin: 0; color: var(--ink); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; line-height: 1.65; }
+    button { font: inherit; -webkit-tap-highlight-color: transparent; }
+    main { width: 100%; max-width: 488px; margin: 0 auto; padding: 27px 20px 32px; padding-bottom: max(32px, env(safe-area-inset-bottom)); }
+    .brand { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 28px; }
+    .wordmark { font-weight: 800; font-size: 17px; letter-spacing: -.5px; }
+    .wordmark span { color: var(--red); }
+    .location { font-size: 11px; font-weight: 700; letter-spacing: 1px; border: 1px solid var(--line); border-radius: 30px; padding: 5px 10px; }
+    .hero { padding-bottom: 25px; }
+    .eyebrow { display: inline-block; margin: 0 0 13px; padding: 4px 10px; border-radius: 6px; background: #fff3bc; color: #65501b; font-size: 12px; font-weight: 700; }
+    h1 { margin: 0 0 10px; font-size: clamp(23px, 6.3vw, 30px); font-weight: 800; letter-spacing: -.7px; line-height: 1.4; }
+    .subtitle { margin: 0; color: var(--muted); font-size: 14px; }
+    .card { border: 1px solid var(--line); border-radius: 18px; padding: 20px; }
+    .steps-card { background: #fafaf7; margin-bottom: 22px; }
+    .section-label { display: flex; align-items: center; gap: 8px; margin: 0 0 15px; font-size: 15px; font-weight: 750; }
+    .section-label::before { content: ""; display: block; width: 4px; height: 14px; border-radius: 3px; background: var(--red); }
+    ol { list-style: none; margin: 0; padding: 0; }
+    li { display: flex; align-items: flex-start; gap: 10px; margin-top: 12px; font-size: 14px; }
+    li:first-child { margin-top: 0; }
+    .step-number { flex: 0 0 20px; color: var(--muted); font-size: 18px; line-height: 1.3; }
+    .copy-card { padding: 0; overflow: hidden; box-shadow: 0 6px 24px rgba(28, 26, 20, .035); }
+    .copy-heading { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; padding: 16px 20px; border-bottom: 1px solid var(--line); }
+    .copy-heading h2 { margin: 0; font-size: 15px; }
+    .copy-heading span { color: var(--muted); font-size: 11px; }
+    .copy-body { padding: 20px; }
+    .post-copy { margin: 0; font-family: inherit; font-size: 15px; line-height: 1.85; white-space: pre-wrap; overflow-wrap: anywhere; word-break: normal; -webkit-user-select: text; user-select: text; -webkit-touch-callout: default; }
+    .copy-action { padding: 0 16px 17px; }
+    .copy-button { display: block; width: 100%; min-height: 56px; padding: 15px 10px; border: 0; border-radius: 12px; background: var(--red); color: #fff; font-size: 16px; font-weight: 750; cursor: pointer; transition: background .15s, transform .15s; touch-action: manipulation; }
+    .copy-button:hover { background: #c91f35; }
+    .copy-button:active { background: #b91c30; transform: scale(.985); }
+    .copy-button:focus-visible { outline: 3px solid #1d4ed8; outline-offset: 4px; }
+    .copy-button:disabled { cursor: wait; opacity: .8; }
+    .copy-status { margin: 12px 2px 0; color: #237144; font-size: 13px; line-height: 1.7; }
+    .copy-status:empty { display: none; }
+    .copy-status.error { color: #b42336; }
+    .tip { display: flex; align-items: flex-start; gap: 8px; margin: 20px 0 0; color: var(--muted); font-size: 13px; line-height: 1.8; }
+    .tip span { flex: 0 0 auto; }
+    footer { margin-top: 27px; padding-top: 18px; border-top: 1px solid var(--line); color: #77776f; text-align: center; font-size: 11px; letter-spacing: .4px; }
+    footer p { margin: 0; }
+    footer .footer-brand { margin-bottom: 4px; font-weight: 700; color: #4f4f49; }
+    noscript p { color: #b42336; font-size: 13px; }
+    @media (max-width: 350px) { main { padding-left: 16px; padding-right: 16px; } .card, .copy-body { padding: 17px; } .copy-card { padding: 0; } .copy-button { font-size: 15px; } }
+    @media (prefers-reduced-motion: reduce) { .copy-button { transition: none; } }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="brand" aria-label="HungryPanda Box Hill">
+      <div class="wordmark">Hungry<span>Panda</span></div>
+      <div class="location">BOX HILL · 墨尔本</div>
+    </div>
+
+    <header class="hero">
+      <p class="eyebrow">线下见面 · 分享此刻</p>
+      <h1>🐼 Box Hill 小红书活动</h1>
+      <p class="subtitle">复制文案 → 配上现场照片 → 发布小红书</p>
+    </header>
+
+    <section class="card steps-card" aria-labelledby="steps-title">
+      <h2 class="section-label" id="steps-title">四步参与，带走小惊喜</h2>
+      <ol>
+        <li><span class="step-number" aria-hidden="true">①</span><span>点击下方「一键复制文案」</span></li>
+        <li><span class="step-number" aria-hidden="true">②</span><span>打开小红书，添加现场照片</span></li>
+        <li><span class="step-number" aria-hidden="true">③</span><span>根据自己的真实体验修改或补充文案</span></li>
+        <li><span class="step-number" aria-hidden="true">④</span><span>向工作人员展示帖子，领取随机活动礼物 🎁</span></li>
+      </ol>
+    </section>
+
+    <section class="card copy-card" aria-labelledby="copy-title">
+      <div class="copy-heading">
+        <h2 id="copy-title">🌶️ 小红书推荐文案</h2>
+        <span>长按文字也可复制</span>
+      </div>
+      <div class="copy-body">
+        <pre class="post-copy" id="post-copy">Box Hill发现一个辣椒酱小福利🌶️
+
+今天来店里下单自取辣椒酱，还拿到了熊猫小礼物🐼
+在Box Hill附近的朋友可以来看看～
+
+#BoxHill #墨尔本生活 #墨尔本美食 #墨尔本留学生 #BoxHill美食 #墨尔本福利</pre>
+      </div>
+      <div class="copy-action">
+        <button type="button" class="copy-button" id="copy-button" aria-describedby="copy-status">📋 一键复制小红书文案</button>
+        <p id="copy-status" class="copy-status" role="status" aria-live="polite" aria-atomic="true"></p>
+        <noscript><p>请长按上方文案复制，再打开小红书发布。</p></noscript>
+      </div>
+    </section>
+
+    <p class="tip"><span aria-hidden="true">💡</span>建议配上现场照片，并根据自己的真实体验修改文案。</p>
+
+    <footer>
+      <p class="footer-brand">HungryPanda · 和你分享身边的小美好</p>
+      <p>无需登录 · 不收集个人信息 · 不使用 Cookie</p>
+    </footer>
+  </main>
+
+  <script>
+    (function () {
+      'use strict';
+      var button = document.getElementById('copy-button');
+      var post = document.getElementById('post-copy');
+      var status = document.getElementById('copy-status');
+      var label = button.textContent;
+
+      // Run synchronously in a tap handler when Clipboard API is unavailable.
+      // iOS needs an attached, selectable textarea for this legacy path.
+      function fallbackCopy(text) {
+        var field = document.createElement('textarea');
+        field.value = text;
+        field.setAttribute('readonly', '');
+        field.setAttribute('aria-label', '待复制的小红书文案');
+        field.style.cssText = 'position:fixed;top:0;left:0;width:1px;height:1px;padding:0;border:0;opacity:0;font-size:16px;';
+        var active = document.activeElement;
+        var selection = window.getSelection();
+        var ranges = [];
+        if (selection) {
+          for (var i = 0; i < selection.rangeCount; i++) ranges.push(selection.getRangeAt(i).cloneRange());
+        }
+        document.body.appendChild(field);
+        var copied = false;
+        try {
+          try { field.focus({ preventScroll: true }); } catch (e) { field.focus(); }
+          field.select();
+          field.setSelectionRange(0, field.value.length);
+          copied = document.execCommand('copy');
+        } catch (e) {
+          copied = false;
+        } finally {
+          document.body.removeChild(field);
+          if (active && typeof active.focus === 'function') {
+            try { active.focus({ preventScroll: true }); } catch (e) { active.focus(); }
+          }
+          if (selection) {
+            selection.removeAllRanges();
+            for (var j = 0; j < ranges.length; j++) selection.addRange(ranges[j]);
+          }
+        }
+        return copied;
+      }
+
+      function finish(copied) {
+        status.className = 'copy-status' + (copied ? '' : ' error');
+        status.textContent = copied
+          ? '✓ 文案已复制！现在可以打开小红书发布啦'
+          : '自动复制失败，请长按上方文案复制。';
+        button.disabled = false;
+        button.textContent = label;
+      }
+
+      button.addEventListener('click', function () {
+        var text = post.textContent;
+        status.textContent = '';
+        button.disabled = true;
+        button.textContent = '正在复制…';
+        if (navigator.clipboard && typeof navigator.clipboard.writeText === 'function') {
+          // Call writeText directly within the user's tap for Safari permissions.
+          try {
+            navigator.clipboard.writeText(text).then(function () {
+              finish(true);
+            }, function () {
+              finish(fallbackCopy(text));
+            });
+          } catch (e) {
+            finish(fallbackCopy(text));
+          }
+        } else {
+          finish(fallbackCopy(text));
+        }
+      });
+    }());
+  </script>
+</body>
+</html>
