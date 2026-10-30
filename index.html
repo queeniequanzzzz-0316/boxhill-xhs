@@ -160,22 +160,33 @@
 
       button.addEventListener('click', function () {
         var text = post.textContent;
+        var completed = false;
+        var timer;
+        function resolveAttempt(copied) {
+          if (completed) return;
+          completed = true;
+          window.clearTimeout(timer);
+          finish(copied);
+        }
+        function tryFallback() {
+          if (!completed) resolveAttempt(fallbackCopy(text));
+        }
         status.textContent = '';
         button.disabled = true;
         button.textContent = '正在复制…';
         if (navigator.clipboard && typeof navigator.clipboard.writeText === 'function') {
+          // Some embedded browsers leave the promise pending after focus changes.
+          timer = window.setTimeout(tryFallback, 2500);
           // Call writeText directly within the user's tap for Safari permissions.
           try {
             navigator.clipboard.writeText(text).then(function () {
-              finish(true);
-            }, function () {
-              finish(fallbackCopy(text));
-            });
+              resolveAttempt(true);
+            }, tryFallback);
           } catch (e) {
-            finish(fallbackCopy(text));
+            tryFallback();
           }
         } else {
-          finish(fallbackCopy(text));
+          tryFallback();
         }
       });
     }());
